@@ -165,20 +165,22 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               className="flex flex-wrap gap-4 mt-8"
             >
               <a
-                href="/Varshine_T_Resume.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Download size={18} />
-                  <span>Download Resume</span>
-                </motion.button>
-              </a>
+  href="/Resume.pdf"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+  >
+    <Download size={18} />
+    <span>Download Resume</span>
+  </motion.button>
+</a>
+
+
             </motion.div>
           </motion.div>
 

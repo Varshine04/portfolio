@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
@@ -19,7 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, darkMode }) 
       }`}
     >
       {/* Animated Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <motion.div
           animate={{
             background: [
@@ -44,6 +44,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, darkMode }) 
         ))}
       </div>
 
+      {/* Main Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -107,19 +108,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, darkMode }) 
           transition={{ duration: 1, delay: 1 }}
           className="mt-6 flex justify-center gap-6"
         >
-
+          {/* Email Button (Gmail compose) */}
           <a
-            href="mailto:varshine12@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=varshine12@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
             className="flex items-center gap-2 px-6 py-3 rounded-full shadow-md transition-all duration-300
                        bg-gray-800 text-white hover:bg-gray-700"
           >
-            <Github size={20} />
+            <Mail size={20} />
             <span className="font-medium">Email</span>
           </a>
-
         </motion.div>
       </div>
 
